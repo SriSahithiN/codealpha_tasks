@@ -1,9 +1,45 @@
 # codealpha_tasks
 Code Alpha Web Develoement Internship Tasks
 <h1>Task-1</h1>
-<h3>Age Calculator</h3>
-<p></p>
+<h3><u>Age Calculator</u></h3>
+<p>               
+<u>Task Description: Enhanced Age Calculator<u><br><br>
+  <img width="1304" height="623" alt="Task-2 WD" src="https://github.com/user-attachments/assets/a5dcc42e-9292-42a1-81af-3150591550ce" />
 
+  
+  ************************ <br>
+Objective <br> <br>
+The primary objective of this web-based application is to provide users with a comprehensive and engaging way to calculate and visualize their age, along with several personalized insights and fun facts.
+
+************************ <br>
+
+Key Features <br><br>
+Precise Age Calculation:<br> Users can input their date of birth to get their exact age broken down into years, months, and days.
+
+Total Time Lived:<br>The calculator dynamically displays the total number of days, hours, minutes, and seconds the user has been alive, with real-time animated counters for an engaging visual effect.
+
+Next Birthday Countdown:<br> A live countdown shows precisely how many days, hours, minutes, and seconds remain until the user's next birthday, building anticipation.
+
+Zodiac Signs:<br> Automatically determines and displays both the user's Western Zodiac Sign and their Chinese Zodiac Animal based on their birth date and year.
+
+Year Progress Bar:<br> A visual progress bar indicates what percentage of the current year has passed for the user, offering a unique perspective on time.
+
+Fun Facts:<br> Provides an interesting historical or pop culture fact tied to the user's birth year, adding an element of discovery.
+
+Life Milestones:<br> Displays personalized life milestones or insights based on the user's current age, offering a reflective touch.
+
+Comparative Age:<br> Users can input a second date of birth to compare their age with another person, showing the exact difference in years, months, and days.
+
+************************** <br>
+Data Persistence & Sharing:<br><br>
+
+Local Storage:<br> The application remembers the user's last entered birth date using local storage, so it's pre-filled on subsequent visits.
+
+Shareable Link:<br> Users can generate a unique URL that embeds their birth date, allowing them to easily share their age and insights with others. A custom message confirms when the link has been copied to the clipboard.
+
+************************ <br>
+<u>Interesting Aspects & Benefits</u>
+This enhanced age calculator goes beyond a simple calculation. It transforms a basic utility into an interactive and informative experience. The inclusion of real-time counters, personalized facts, and comparative features makes it a fun tool for self-discovery and sharing. The clean, responsive design ensures a smooth experience across various devices.
 
 
 
