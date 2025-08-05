@@ -1,0 +1,80 @@
+        /* Custom styles for a polished look */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7fafc;
+            background-image: url('https://images.unsplash.com/photo-1518621736915-f554475bfd89?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: #4a5568;
+            transition: background-color 0.5s ease;
+        }
+
+        .container {
+            max-width: 900px;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Priority-based colored borders */
+        .priority-high { border-left-color: #ef4444; } /* Red */
+        .priority-medium { border-left-color: #f59e0b; } /* Amber */
+        .priority-low { border-left-color: #3b82f6; } /* Blue */
+
+        /* Animation for when a task is deleted */
+        @keyframes fadeOutAndShrink {
+            from { opacity: 1; transform: scale(1); height: auto; }
+            to { opacity: 0; transform: scale(0.9); height: 0; padding: 0; margin-bottom: 0; }
+        }
+
+        .fade-out {
+            animation: fadeOutAndShrink 0.3s forwards;
+            overflow: hidden;
+        }
+
+        /* Dark mode styles */
+        .dark-mode {
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+
+        .dark-mode .container {
+            background-color: rgba(45, 55, 72, 0.95);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+        }
+
+        .dark-mode .task-completed .task-text { color: #718096; }
+        .dark-mode .bg-white { background-color: #2d3748; }
+        .dark-mode .text-gray-800 { color: #e2e8f0; }
+        .dark-mode .text-gray-500 { color: #a0aec0; }
+        .dark-mode .bg-gray-50 { background-color: #4a5568; }
+        .dark-mode .border-gray-300 { border-color: #4a5568; }
+        .dark-mode .border-gray-200 { border-color: #4a5568; }
+        .dark-mode .filter-button { color: #cbd5e0; background-color: #4a5568; }
+        .dark-mode .filter-button.active { background-color: #4f46e5; color: white; }
+        .dark-mode .task-input { color: #e2e8f0; background-color: #4a5568; }
+        .dark-mode select { color: #e2e8f0; background-color: #4a5568; }
+        .dark-mode input[type="date"] { color: #e2e8f0; background-color: #4a5568; }
+
+        /* Progress Bar Styles */
+        .progress-bar-container {
+            height: 8px;
+            background-color: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0;
+            background-color: #48bb78; /* Green */
+            transition: width 0.5s ease-in-out;
+        }

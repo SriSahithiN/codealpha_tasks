@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supercharged To-Do List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class=" bg-green-100 min-h-screen flex items-center justify-center p-4 transition-colors duration-500 h-48"></body>
+ 
+    <div class="container bg-white shadow-2xl rounded-lg p-6 md:p-10 w-full">
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800">Advanced To-Do List</h1>
+            <div class="flex items-center space-x-4">
+                <button id="dark-mode-toggle" class="p-2 rounded-full text-gray-500 hover:bg-gray-200 transition-colors duration-200">
+                    <i id="moon-icon" class="fa-solid fa-moon"></i>
+                    <i id="sun-icon" class="fa-solid fa-sun hidden"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="mb-6">
+            <div class="flex justify-between items-center mb-2 text-sm text-gray-500">
+                <span>Progress</span>
+                <span id="progress-text">0%</span>
+            </div>
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+        </div>
+        
+        <div class="flex flex-col gap-4 mb-8">
+            <input 
+                type="text" 
+                id="task-input" 
+                placeholder="What do you need to get done?" 
+                class="flex-grow p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg transition-colors task-input"
+            >
+            <div class="flex flex-col md:flex-row gap-4">
+                <input type="date" id="due-date-input" class="p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg task-input">
+                <select id="priority-input" class="flex-grow p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg task-input">
+                    <option value="low">Low Priority</option>
+                    <option value="medium" selected>Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <input type="text" id="category-input" placeholder="Add categories (e.g., Work, Home)" class="p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg task-input">
+            </div>
+            <button 
+                id="add-button" 
+                class="bg-blue-600 text-white font-bold p-4 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200 ease-in-out text-lg"
+            >
+                <i class="fas fa-plus mr-2"></i> Add Task
+            </button>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
+            <input type="text" id="search-input" placeholder="Search tasks..." class="flex-grow p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 text-sm md:text-base task-input">
+            <div id="filter-buttons" class="flex space-x-2">
+                <button data-filter="all" class="filter-button active text-sm md:text-base px-4 py-2 rounded-full font-medium transition-colors duration-200 text-white bg-blue-600 hover:bg-blue-700">All</button>
+                <button data-filter="active" class="filter-button text-sm md:text-base px-4 py-2 rounded-full font-medium transition-colors duration-200 text-gray-600 bg-gray-200 hover:bg-gray-300">Active</button>
+                <button data-filter="completed" class="filter-button text-sm md:text-base px-4 py-2 rounded-full font-medium transition-colors duration-200 text-gray-600 bg-gray-200 hover:bg-gray-300">Completed</button>
+            </div>
+            <select id="sort-select" class="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base task-input">
+                <option value="default">Default Order</option>
+                <option value="priority">Priority</option>
+                <option value="duedate">Due Date</option>
+            </select>
+        </div>
+
+        <div class="flex justify-end mb-6">
+            <button id="clear-completed-button" class="text-red-500 hover:text-red-700 font-medium text-sm md:text-base transition-colors duration-200">
+                <i class="fas fa-trash-can mr-2"></i> Clear All Completed
+            </button>
+        </div>
+        
+        <ul id="task-list" class="space-y-4">
+            </ul>
+
+        <div id="empty-message" class="text-center text-gray-500 mt-8 hidden">
+            <i class="fas fa-list-check text-4xl mb-2"></i>
+            <p>Your to-do list is empty. Add a new task above!</p>
+        </div>
+        <div id="celebration-message" class="text-center text-green-600 font-semibold text-xl mt-8 hidden">
+            <i class="fas fa-trophy text-4xl mb-2"></i>
+            <p>🎉 All tasks completed! Great job! 🎉</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
